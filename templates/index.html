@@ -1,5 +1,6 @@
 [[extend 'layout.html']]
 
+
 <style>
 [v-cloak] {
      display: none;
@@ -9,6 +10,8 @@
 
 <div class="section" id="vue-target" v-cloak>
   <!-- Put here your Vue.js template -->
+  <v-calendar></v-calendar>
+  <v-date-picker v-model='selectedDate' />
 </div>
 
 
@@ -17,5 +20,7 @@
 <script>
   let my_callback_url = "[[=XML(my_callback_url)]]";
 </script>
+
+<script src='https://unpkg.com/v-calendar'></script>
 <script src="js/index.js"></script>
 [[end]]
